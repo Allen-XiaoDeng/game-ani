@@ -8,7 +8,7 @@
     width: 100%;
     min-height: 100vh;
     color: #fff;
-    background: url("../img/bg.png") no-repeat;
+    background: url(../img/bg.png) no-repeat;
     background-attachment: fixed;
 }
 
@@ -17,13 +17,15 @@
     grid-template-columns: 300px 1fr;
 }
 
-/* .left {
-    background: #000
-} */
+/*
+.left {
+    background: #000;
+}
+*/
 
 .date {
     width: 300px;
-    height: 100px;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,14 +40,13 @@
     position: fixed;
     left: 60px;
     top: 60px;
-
 }
 
 .nav {
     position: fixed;
     top: 70px;
     right: 120px;
-    z-index: 3
+    z-index: 3;
 }
 
 .nav ul li {
@@ -53,7 +54,7 @@
     padding-left: 30px;
     color: #ffa178;
     font-weight: 400;
-    cursor: point;
+    cursor: pointer;
 }
 
 .release {
@@ -62,4 +63,51 @@
     position: fixed;
     top: 200px;
     left: 300px;
+}
+
+.date-list {
+    width: 60%;
+}
+
+.date-list li {
+    list-style: none;
+    line-height: 28px;
+}
+
+.date-list li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.date-list h3 {
+    padding: 14px;
+    padding-left: 0px;
+    font-weight: 200;
+    position: relative;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, .5);
+}
+
+.date-list li:hover h3 {
+    font-weight: 400;
+    padding-left: 40px;
+    font-size: 28px;
+    color: #ffa178;
+}
+
+.date-list h3::before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: #ffa178;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: 0.5s;
+}
+
+.date-list li:hover h3::before {
+    width: 30px;
 }
